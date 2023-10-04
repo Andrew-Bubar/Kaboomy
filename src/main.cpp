@@ -1,4 +1,6 @@
 
+#include "kaboomy_lib.h"
+
 //test
 
 // Varribles
@@ -95,6 +97,11 @@ int main(){
     while (running)
     {
         platform_update_window();
+
+
+        SM_TRACE("text");
+        SM_WARN("Test");
+        SM_ERROR("tEst");
     }
     
     return 0;
