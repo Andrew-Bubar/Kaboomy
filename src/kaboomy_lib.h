@@ -207,5 +207,13 @@ char* read_file(char* filePath, int* fileSize, BumpAllocator* ba){
 
 void write_file(char* filePath, char* buffer, int size){
 
-  
+  SM_ASSERT(filePath, "Theres no file path");
+  SM_ASSERT(buffer, "Theres no buffer");
+
+  auto file = fopen(filePath, "wb");
+
+  if(!file){
+    SM_ERROR("Failed to open file: ")
+  }
+
 }
